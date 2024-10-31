@@ -10,12 +10,30 @@
     <script>
         let qtdNomes = prompt("Quantos nomes deseja inserir na lista?", "Digite apenas um número. Ex: 5");
         let listaNomes = [];
+        let listaNomesOrdemAlfabetica = [];
 
         for (let i = 0; i < qtdNomes; i++) {
             listaNomes.push(prompt("Digite o " + (i+1) + "º nome: " ));
         }
 
         document.write("<p>Foram digitados " + listaNomes.length + " nomes.</p>");
+
+        document.write("<h4>Nomes da ordem que foram digitados:</h4>");
+        document.write ("<ol>");
+        listaNomes.map(nome => {document.write("<li>" + nome + "</li>")});
+        document.write("</ol>");
+
+        document.write("<h4>Nomes em ordem alfabética:</h4>");
+        listaNomesOrdemAlfabetica = listaNomes.slice()
+        listaNomesOrdemAlfabetica.sort()
+        document.write ("<ol>");
+        listaNomesOrdemAlfabetica.map(nome => {document.write("<li>" + nome + "</li>")});
+        document.write("</ol>");
+
+        document.write("<h4>Nomes da ordem que foram digitados:</h4>");
+        document.write ("<ol>");
+        listaNomes.map(nome => {document.write("<li>" + nome.toUpperCase() + "</li>")});
+        document.write("</ol>");
     </script>
 </body>
 </html>
