@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número do Mês</title>
+</head>
+<body>
+    <h1>Números dos Meses</h1>
+
+    <script>
+        let meses = [
+            "01 - Janeiro", 
+            "02 - Fevereiro", 
+            "03 - Março", 
+            "04 - Abril", 
+            "05 - Maio",
+            "06 - Junho",
+            "07 - Julho",
+            "08 - Agosto",
+            "09 - Setembro",
+            "10 - Outubro",
+            "11 - Novembro",
+            "12 - Dezembro"
+        ];
+        let numeroMes;
+        numeroMes = prompt("Digite o número do mês desejado: ");
+
+        if (numeroMes <= 0 || numeroMes > 12) {
+            document.write("<p>Mês inválido. Não existe mês para o valor " + numeroMes + "</p>")
+        } else {
+            document.write(meses[numeroMes-1])
+        }
+
+
+        
+    </script>
+
+</body>
+</html>

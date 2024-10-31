@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <h1>Números Pares</h1>
+
+    <script>
+        let numeroDigitado;
+        let numerosPares = [];
+        let soma = 0;
+
+        numeroDigitado = prompt("Digite um número: ");
+
+        while (numeroDigitado <= 0) {
+            alert("Número inválido. Digite um número maior do que 0.");
+            numeroDigitado = prompt("Digite um número: ");
+        }
+
+        document.write("<p>Você digitou o número " + numeroDigitado + ".</p>");
+
+        for (let i = 1; i <= numeroDigitado; i++) {
+            if(i % 2 == 0) {
+                numerosPares.push(i);
+                soma += i;
+            }
+        }
+
+        document.write("<p>Números pares: " + numerosPares.map(numero => (" " + numero)) + ".</p>");
+        document.write("<p>Quantidade de pares: " + numerosPares.length + " números.</p>");
+        document.write("<p>Soma dos pares: " + soma + ".</p>");
+
+
+    </script>
+</body>
+</html>
