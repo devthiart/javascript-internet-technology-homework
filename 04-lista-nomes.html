@@ -6,7 +6,12 @@
     <title>Lista de Nomes</title>
 </head>
 <body>
+    <nav>
+        <a href="./index.html">Voltar</a>
+    </nav>
+
     <h1>Lista de nomes</h1>
+
     <script>
         let qtdNomes = prompt("Quantos nomes deseja inserir na lista?", "Digite apenas um número. Ex: 5");
         let listaNomes = [];
@@ -30,7 +35,7 @@
         listaNomesOrdemAlfabetica.map(nome => {document.write("<li>" + nome + "</li>")});
         document.write("</ol>");
 
-        document.write("<h4>Nomes da ordem que foram digitados:</h4>");
+        document.write("<h4>Nomes em maiúsculo:</h4>");
         document.write ("<ol>");
         listaNomes.map(nome => {document.write("<li>" + nome.toUpperCase() + "</li>")});
         document.write("</ol>");
